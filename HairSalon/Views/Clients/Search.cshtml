@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h1>Welcome to Eau Claire's Salon!</h1>
+<h4>Please type a client name below.<h4>
+
+@using (Html.BeginForm("Result", "Clients", FormMethod.Post))
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+
+  <input type="submit" value="Search a client" class="btn btn-primary"/>
+}
+
+
+

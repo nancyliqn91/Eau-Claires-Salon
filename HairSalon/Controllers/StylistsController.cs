@@ -90,7 +90,7 @@ namespace HairSalon.Controllers
                                   .FirstOrDefault(stylist => stylist.EmployeeName == name);
       if (thisStylist != null)
       {
-        return View ("Result");
+        return View (thisStylist);
       }
       else
       {

@@ -81,5 +81,33 @@ namespace HairSalon.Controllers
         return RedirectToAction("Index");
       }  
 
+      public ActionResult Search()
+      {
+        return View();
+      }  
+
+      public ActionResult NoResult()
+      {
+        return View();
+      }  
+
+      [HttpPost]
+      public ActionResult Result(Client client)
+      {
+        string name = client.Name;
+        Client thisClient = _db.Clients
+                                    .Include(client => client.Stylist)
+                                    .FirstOrDefault(client => client.Name == name);
+        if (thisClient != null)
+        {
+          return View (thisClient);
+        }
+        else
+        {
+          return RedirectToAction("NoResult");
+        }
+      }   
+
+
   }
 }
