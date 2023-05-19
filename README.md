@@ -35,6 +35,7 @@ It will serve as a a website where users can add a list of stylists working at t
 
 ```
 Eau Claire's Salon.Solution/HairSalon/appsettings.json
+
  {
     "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;
@@ -46,10 +47,10 @@ Eau Claire's Salon.Solution/HairSalon/appsettings.json
 
 ## Import Database
 * Import the database named "qian_li.sql" from the root directory of the project.
-* In the Navigator > Administration window, select Data Import/Restore.
+* Open your MySQL Workbench. In the Navigator > Administration window, select Data Import/Restore.
 * In Import Options select Import from Self-Contained File.
 * Under Default Schema to be Imported To, select the New button.
-* Enter the name of your database with _test appended to the end. In this case qian_li. Click Ok.
+* Enter the name of your database. In this case qian_li. Click Ok.
 * Navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
 * After you are finished with the above steps, reopen the Navigator > Schemas tab. Right click and select Refresh All. The database will appear.
 
