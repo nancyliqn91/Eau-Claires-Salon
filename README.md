@@ -34,6 +34,7 @@ It will serve as a a website where users can add a list of stylists working at t
 * Please add this appsettings.json file to the .gitignore file before push this cloned project to a public-facing repository.
 
 ```
+Eau Claire's Salon.Solution/HairSalon/appsettings.json
  {
     "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;
