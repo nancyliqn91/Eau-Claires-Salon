@@ -29,22 +29,22 @@ It will serve as a a website where users can add a list of stylists working at t
 
 ## Database Connection String Setup 
 
-* Create an appsetting.json file in the "HairSalon" directory of the project.
+* Create an appsetting.json file in the "HairSalon" directory of the project. The example is below.
 * Within appsettings.json, put in the following code, replacing the uid and pwd values with your own username and password for MySQL Workbench.
-
 * Please add this appsettings.json file to the .gitignore file before push this cloned project to a public-facing repository.
 
-HairSalon/appsettings.json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=qian_li;uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
-  }
-}
-
-* Import the database named "qian_li.sql" from the root directory of the project. See instructions below.
+```
+ {
+    "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;
+      database=qian_li;uid=[YOUR-USER-HERE];
+      pwd=[YOUR-PASSWORD-HERE];"
+    }
+ }
+```
 
 ## Import Database
-
+* Import the database named "qian_li.sql" from the root directory of the project.
 * In the Navigator > Administration window, select Data Import/Restore.
 * In Import Options select Import from Self-Contained File.
 * Under Default Schema to be Imported To, select the New button.
