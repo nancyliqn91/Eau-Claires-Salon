@@ -7,11 +7,11 @@
 <h1>Welcome to Eau Claire's Salon!</h1>
 <h4>Please type a stylist name below.<h4>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Result", "Stylists", FormMethod.Post))
 {
   @Html.LabelFor(model => model.EmployeeName)
   @Html.TextBoxFor(model => model.EmployeeName)
 
-  <input type="submit" value="Search a stylist" />
+  <input type="submit" value="Search a stylist" class="btn btn-primary"/>
 }
 
