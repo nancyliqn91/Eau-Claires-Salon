@@ -23,6 +23,8 @@ It will serve as a a website where users can add a list of stylists working at t
 * _Clone “Eau-Claires-Salon.solution“ from the repository to your desktop_.
 * _Navigate to "Eau-Claires-Salon.solution" directory via your local terminal command line_.
 * Run the app, first navigate to this project's production directory called "HairSalon". 
+* Add appsettings.json file, please see the "Database Connection String Setup" instruction below.
+* Import database, please see the "Import Database" instruction below.
 * In the command line, run `dotnet run` in the "HairSalon" directory to run the app. 
 * Open the browser to _https://localhost:5001_. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
 * Optionally, you can run `dotnet build` to compile this console app without running it.
