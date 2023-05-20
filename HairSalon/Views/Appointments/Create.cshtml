@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Appointment
+
+<p><strong>NOTE:</strong> You need to have at least one client and a stylist before you can add an appointment!</p>
+<p>Go to @Html.ActionLink("this page", "Create", "Clients") to add a client.</p>
+<p>Go to @Html.ActionLink("this page", "Create", "Stylists") to add a stylist.</p>
+
+<h4>Add a new appointment</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Time)
+  @Html.TextBoxFor(model => model.Time)
+
+  @Html.LabelFor(model => model.Client)
+  @Html.DropDownList("ClientId")
+
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
+  <input type="submit" value="Add new appointment" class="btn btn-primary"/>
+}
+
+<p>@Html.ActionLink("Show all appointments", "Index")</p>

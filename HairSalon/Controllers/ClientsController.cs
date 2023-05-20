@@ -47,6 +47,7 @@ namespace HairSalon.Controllers
       {
         Client thisClient = _db.Clients
                             .Include(client => client.Stylist)
+                            .Include(client => client.Appointments)
                             .FirstOrDefault(client => client.ClientId == id);
         return View(thisClient);
       }

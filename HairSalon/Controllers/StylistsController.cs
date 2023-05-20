@@ -38,6 +38,7 @@ namespace HairSalon.Controllers
     {
       Stylist thisStylist = _db.Stylists
                                   .Include(stylist => stylist.Clients)
+                                  .Include(stylist => stylist.Appointments)
                                   .FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
@@ -98,19 +99,6 @@ namespace HairSalon.Controllers
       }
     }   
 
-    // for add appointment from client to a stylist
-    public ActionResult Appointment()
-    {
-      return View();
-    }
-
-    [HttpPost]
-    public ActionResult Create(Stylist stylist)
-    {
-      _db.Stylists.Add(stylist);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
 
   }
 }
