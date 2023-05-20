@@ -17,7 +17,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Stylist> model = _db.Stylists.ToList();
+      List<Stylist> model = _db.Stylists.OrderBy(stylist => stylist.EmployeeName).ToList();
       return View(model);
     }
 

@@ -18,10 +18,9 @@ else
     
     @foreach (Appointment appointment in Model)
     {
-      <h4> Client Name: @appointment.Client.Name</h4>
-      <h4> Stylist Name: @appointment.Client.Name</h4>
+      
       <li>
-      @Html.ActionLink($"{appointment.Time}", "Details", new { id = appointment.AppointmentId }) </li>     
+      @Html.ActionLink($"{appointment.Time}", "Details", new { id = appointment.AppointmentId }) | Client Name: @appointment.Client.Name | Stylist Name: @appointment.Stylist.EmployeeName</li>     
     }
   </ul>
 }

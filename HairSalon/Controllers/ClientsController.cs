@@ -20,6 +20,7 @@ namespace HairSalon.Controllers
       public ActionResult Index()
       {
         List<Client> model = _db.Clients
+                                .OrderBy(client => client.Name)
                               .Include(client => client.Stylist)
                               .ToList();
         return View(model);

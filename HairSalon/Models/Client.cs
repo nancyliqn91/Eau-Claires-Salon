@@ -11,5 +11,6 @@ namespace HairSalon.Models
     public Stylist Stylist { get; set; }
 
     public List<Appointment> Appointments { get; set; }
+    
   }
 }
