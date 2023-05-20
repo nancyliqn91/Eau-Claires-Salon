@@ -2,7 +2,7 @@
 
 #### By _Qian Li_ 😊
 
-#### This is my independent c# project for practice which creates a MVC web application to help a salon manage employees (stylists) and clients. 
+#### This is my independent c# project for practice which creates a MVC web application to help a salon manage employees (stylists) and clients. A user can also see the employees (stylists) and clients list alphabetically, search them by name, and add appointments with them.
 
 ## Technologies Used
 
